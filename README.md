@@ -1,6 +1,6 @@
 # Whatsapp-review-collector
 
-##Built with:
+## Built with:
 
   FastAPI (Python backend)
   PostgreSQL (Database)
@@ -8,7 +8,7 @@
   Twilio WhatsApp Sandbox (Messaging)
   Docker Compose (Easiest way to run everything)
 
-##Install Docker Desktop
+## Install Docker Desktop
 
 Download: https://www.docker.com/products/docker-desktop/
 
@@ -16,7 +16,7 @@ After installation, ensure you see:
 
 Engine running
 
-##Twilio WhatsApp Sandbox Setup
+## Twilio WhatsApp Sandbox Setup
 Step 1 — Create Twilio Account
 
 https://www.twilio.com/try-twilio
@@ -46,7 +46,7 @@ TWILIO_ACCOUNT_SID = ACxxxxxxxxxxxxxxxxxxxx
 TWILIO_AUTH_TOKEN  = yyyyyyyyyyyyyyyyyyyyy
 TWILIO_WHATSAPP_NUMBER = whatsapp:+1415xxxxxxx
 
-##Create .env file
+## Create .env file
 
 Inside backend/ create a file named .env:
 
@@ -56,7 +56,7 @@ TWILIO_AUTH_TOKEN=yyyyyyy...
 TWILIO_WHATSAPP_NUMBER=whatsapp:+1415xxxxxxx
 HOST_URL=http://localhost:8000
 
-##Start Backend + PostgreSQL using Docker
+## Start Backend + PostgreSQL using Docker
 
 Open terminal in the project root:
 docker compose up --build
@@ -77,7 +77,7 @@ Uvicorn running on http://0.0.0.0:8000
 
 Do not close this terminal.
 
-##Start React Frontend
+## Start React Frontend
 
 Open a second terminal:
 
@@ -90,7 +90,7 @@ Frontend runs at:
 
 👉 http://localhost:3000
 
-##Connect Twilio Webhook
+## Connect Twilio Webhook
 
 Go to:
 
@@ -123,7 +123,7 @@ Bot conversation:
 
 Review saved!
 
-##View Reviews in the Dashboard
+## View Reviews in the Dashboard
 
 Open:
 

@@ -1,25 +1,22 @@
 # Whatsapp-review-collector
 
-Built with:
+##Built with:
 
-FastAPI (Python backend)
+  FastAPI (Python backend)
+  PostgreSQL (Database)
+  React (Frontend UI)
+  Twilio WhatsApp Sandbox (Messaging)
+  Docker Compose (Easiest way to run everything)
 
-PostgreSQL (Database)
-
-React (Frontend UI)
-
-Twilio WhatsApp Sandbox (Messaging)
-
-Docker Compose (Easiest way to run everything)
-
-✅ Install Docker Desktop
+##Install Docker Desktop
 
 Download: https://www.docker.com/products/docker-desktop/
 
 After installation, ensure you see:
 
 Engine running
-2. Twilio WhatsApp Sandbox Setup
+
+##Twilio WhatsApp Sandbox Setup
 Step 1 — Create Twilio Account
 
 https://www.twilio.com/try-twilio
@@ -49,7 +46,7 @@ TWILIO_ACCOUNT_SID = ACxxxxxxxxxxxxxxxxxxxx
 TWILIO_AUTH_TOKEN  = yyyyyyyyyyyyyyyyyyyyy
 TWILIO_WHATSAPP_NUMBER = whatsapp:+1415xxxxxxx
 
-📝 3. Create .env file
+##Create .env file
 
 Inside backend/ create a file named .env:
 
@@ -59,18 +56,14 @@ TWILIO_AUTH_TOKEN=yyyyyyy...
 TWILIO_WHATSAPP_NUMBER=whatsapp:+1415xxxxxxx
 HOST_URL=http://localhost:8000
 
-🐳 4. Start Backend + PostgreSQL using Docker
+##Start Backend + PostgreSQL using Docker
 
 Open terminal in the project root:
-
 docker compose up --build
 
-
 This will:
-
-Build backend
-
-Start PostgreSQL
+  Build backend
+  Start PostgreSQL
 
 Create required tables
 
@@ -84,7 +77,7 @@ Uvicorn running on http://0.0.0.0:8000
 
 Do not close this terminal.
 
-⚛️ 5. Start React Frontend
+##Start React Frontend
 
 Open a second terminal:
 
@@ -97,7 +90,7 @@ Frontend runs at:
 
 👉 http://localhost:3000
 
-🔁 6. Connect Twilio Webhook
+##Connect Twilio Webhook
 
 Go to:
 
@@ -113,15 +106,13 @@ http://localhost:8000/webhook
 
 Click Save.
 
-🗣 7. Test Your WhatsApp Bot
+##Test Your WhatsApp Bot
+<Send ("price-honor") to start Twilio Chat.>
 
 In WhatsApp, send message to your sandbox number:
 
 Hi
-
-
 Bot conversation:
-
 1️⃣ Bot → “Which product is this review for?”
 2️⃣ You → Laptop
 3️⃣ Bot → “What’s your name?”
@@ -130,21 +121,20 @@ Bot conversation:
 6️⃣ You → Battery life is amazing.
 7️⃣ Bot → “Thanks Ayush — your review for Laptop has been recorded. 🙏”
 
-🎉 Review saved!
+Review saved!
 
-📊 8. View Reviews in the Dashboard
+##View Reviews in the Dashboard
 
 Open:
 
-👉 http://localhost:3000
+http://localhost:3000
 
 You will see a table:
 
 User	Product	Review	Time
 Ayush	Laptop	Battery life is amazing	2025-11-20 10:18 AM
-🛑 9. Stop All Services
+##Stop All Services
 
 Press CTRL + C in both terminals.
 
-Or fr
 
